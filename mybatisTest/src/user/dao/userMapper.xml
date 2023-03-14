@@ -36,7 +36,7 @@
 		delete from usertable where id=#{id}
 	</delete>
 	
-	<select id="search" parameterType="String" resultType="user">
+	<select id="search" parameterType="java.util.Map" resultType="user">
 		select * from usertable where ${column} like #{value}
 	</select>
 	
